@@ -1,0 +1,21 @@
+server:
+  port: 9093
+
+spring:
+  config:
+    import: configserver:http://localhost:8888
+  application:
+    name: example
+  profiles:
+    active: dev #
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['refresh','beans','env', 'bus-refresh']

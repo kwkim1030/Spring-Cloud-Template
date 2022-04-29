@@ -1,0 +1,5 @@
+order-service:
+  name: Hello
+  type: dev
+
+greeting: "Order Service Config dev 511"
