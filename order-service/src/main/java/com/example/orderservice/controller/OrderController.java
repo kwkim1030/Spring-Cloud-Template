@@ -27,12 +27,12 @@ public class OrderController {
 
     @PostMapping("/{userId}/orders")
     public String getOrders(@PathVariable("userId") Long id) {
-//        try {
-//            logger.warn("Circuit Breaker Test id : {}", id);
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            logger.warn("Circuit Breaker Test id : {}", id);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         String res = id + " 주문 내역 @@@";
         return res;
     }
